@@ -15,12 +15,12 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #5A7AFF 0%, #6B5BFF 30%, #8A5AFF 70%, #6B4BA5 100%);
             min-height: 100vh;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -28,18 +28,20 @@
         .header {
             text-align: center;
             background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            padding: 30px;
+            border-radius: 20px;
+            padding: 40px 30px;
             margin-bottom: 30px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
         }
 
         .content {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
-            padding: 40px;
+            padding: 30px;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            margin-bottom: 25px;
         }
 
         h1 {
@@ -49,12 +51,13 @@
         }
 
         h2 {
-            color: #34495e;
+            color: #2c3e50;
             margin-top: 30px;
-            margin-bottom: 15px;
-            font-size: 1.4em;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-bottom: 3px solid #6B5BFF;
+            padding-bottom: 10px;
+            display: inline-block;
         }
 
         h3 {
@@ -79,36 +82,69 @@
         }
 
         .back-btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #5A7AFF 0%, #6B5BFF 50%, #8A5AFF 100%);
             color: white;
-            padding: 12px 25px;
+            padding: 12px 30px;
             border: none;
             border-radius: 25px;
+            font-size: 1.1em;
+            font-weight: 600;
             text-decoration: none;
             display: inline-block;
             margin-bottom: 20px;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(90, 122, 255, 0.3);
         }
 
         .back-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(90, 122, 255, 0.4);
+            background: linear-gradient(135deg, #6B5BFF 0%, #8A5AFF 50%, #6B4BA5 100%);
         }
 
         .highlight {
-            background: #f8f9fa;
-            padding: 15px;
-            border-left: 4px solid #3498db;
-            margin: 20px 0;
-            border-radius: 5px;
+            background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+            padding: 20px;
+            border-left: 4px solid #6B5BFF;
+            margin: 25px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(107, 91, 255, 0.1);
         }
 
         .warning {
-            background: #fff3cd;
-            padding: 15px;
-            border-left: 4px solid #ffc107;
-            margin: 20px 0;
-            border-radius: 5px;
+            background: linear-gradient(145deg, #fff3cd, #ffeaa7);
+            padding: 20px;
+            border-left: 4px solid #f39c12;
+            margin: 25px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(243, 156, 18, 0.1);
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: rgba(255, 255, 255, 0.8);
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
         }
 
         .last-updated {
@@ -129,35 +165,59 @@
 
         <div class="content">
             <div class="highlight">
-                <p><strong>重要声明：</strong>请仔细阅读本服务条款。使用诗章应用即表示您同意遵守本条款的所有规定。</p>
+                <p><strong>重要声明：</strong>诗章是一款个人诗词创作工具，专注于为您提供安全、私密的创作环境。使用诗章即表示您同意遵守本服务条款。</p>
+            </div>
+
+            <h2>0. 服务特色</h2>
+            
+            <div class="highlight">
+                <p><strong>诗章的服务优势：</strong></p>
+                <ul style="margin-left: 0; padding-left: 20px;">
+                    <li><strong>个人创作工具：</strong>专注于个人诗词创作和排版</li>
+                    <li><strong>本地+云端：</strong>灵活的存储和同步方式</li>
+                    <li><strong>完全免费：</strong>所有核心功能永久免费</li>
+                    <li><strong>隐私保护：</strong>您的作品完全私密</li>
+                    <li><strong>无广告干扰：</strong>纯净的创作体验</li>
+                </ul>
             </div>
 
             <h2>1. 服务说明</h2>
             
             <h3>1.1 服务内容</h3>
-            <p>诗章（PoemVerse）是一款专为诗歌爱好者设计的移动应用程序，提供以下服务：</p>
+            <p>诗章（PoemVerse）是一款专为诗词创作者设计的个人创作工具，提供以下服务：</p>
             <ul>
-                <li>诗歌作品阅读和浏览</li>
-                <li>个人收藏和管理功能</li>
-                <li>作者作品专栏</li>
-                <li>用户账户管理</li>
-                <li>其他相关诗歌文化服务</li>
+                <li><strong>本地创作：</strong>完全本地化的诗词创作和排版</li>
+                <li><strong>云端同步：</strong>可选的云端数据同步和备份</li>
+                <li><strong>精美排版：</strong>手动调整文字位置和图片排版</li>
+                <li><strong>作品导出：</strong>一键下载精美排版图片</li>
+                <li><strong>个人管理：</strong>作品的私密存储和管理</li>
             </ul>
 
             <h3>1.2 服务性质</h3>
-            <p>本应用为免费应用，我们致力于为用户提供优质的诗歌阅读体验。服务内容可能根据实际情况进行调整。</p>
+            <p>诗章是完全免费的个人创作工具，无广告、无内购、无社交功能。我们致力于为您提供纯净的创作环境。</p>
 
-            <h2>2. 用户注册与账户</h2>
+            <h3>1.3 服务模式</h3>
+            <ul>
+                <li><strong>本地模式：</strong>无需注册，完全离线使用</li>
+                <li><strong>云端模式：</strong>可选注册，支持多设备同步</li>
+            </ul>
+
+            <h2>2. 用户账户（云端模式）</h2>
             
-            <h3>2.1 注册条件</h3>
+            <h3>2.1 账户创建</h3>
+            <div class="highlight">
+                <p><strong>重要：</strong>诗章支持完全本地使用，无需注册账户。仅在您需要云端同步功能时才需创建账户。</p>
+            </div>
+            
+            <p>创建云端账户的条件：</p>
             <ul>
                 <li>具有完全民事行为能力的自然人</li>
-                <li>提供真实、准确的注册信息</li>
+                <li>提供有效的邮箱地址（仅用于登录和找回密码）</li>
                 <li>遵守本服务条款及相关法律法规</li>
             </ul>
 
             <h3>2.2 账户安全</h3>
-            <p>您有责任：</p>
+            <p>为保护您的作品安全，您需要：</p>
             <ul>
                 <li>妥善保管账户信息和密码</li>
                 <li>不与他人共享账户</li>
@@ -165,14 +225,22 @@
                 <li>对账户下的所有活动负责</li>
             </ul>
 
+            <h3>2.3 账户限制</h3>
+            <ul>
+                <li>一个邮箱地址只能注册一个账户</li>
+                <li>禁止创建虚假或恶意账户</li>
+                <li>长期不使用的账户可能被注销</li>
+            </ul>
+
             <h2>3. 用户行为规范</h2>
             
-            <h3>3.1 允许的行为</h3>
+            <h3>3.1 鼓励的使用方式</h3>
             <ul>
-                <li>按照应用设计目的正常使用功能</li>
-                <li>收藏和分享诗歌作品</li>
-                <li>提供合理的反馈和建议</li>
-                <li>参与应用社区活动</li>
+                <li><strong>创作诗词：</strong>使用应用进行个人诗词创作</li>
+                <li><strong>排版美化：</strong>利用排版工具美化作品</li>
+                <li><strong>个人珍藏：</strong>将作品保存为个人纪念</li>
+                <li><strong>合理导出：</strong>下载作品用于合法目的</li>
+                <li><strong>反馈建议：</strong>提供合理的产品改进建议</li>
             </ul>
 
             <h3>3.2 禁止的行为</h3>
@@ -180,31 +248,59 @@
                 <p><strong>严禁以下行为：</strong></p>
             </div>
             <ul>
-                <li>上传、传播违法违规内容</li>
-                <li>恶意攻击、破坏应用系统</li>
-                <li>盗用他人账户或冒充他人</li>
-                <li>传播垃圾信息或进行商业推广</li>
-                <li>侵犯他人知识产权</li>
-                <li>使用外挂、插件等第三方工具</li>
-                <li>其他违反法律法规的行为</li>
+                <li><strong>恶意攻击：</strong>攻击、破坏应用系统或服务器</li>
+                <li><strong>账户滥用：</strong>盗用他人账户或冒充他人</li>
+                <li><strong>数据破坏：</strong>故意破坏数据或传播恶意代码</li>
+                <li><strong>版权侵犯：</strong>上传或使用侵犯他人版权的内容</li>
+                <li><strong>商业利用：</strong>将应用用于未经授权的商业目的</li>
+                <li><strong>技术破解：</strong>逆向工程、破解或修改应用</li>
+                <li><strong>法律违规：</strong>任何违反法律法规的行为</li>
             </ul>
+
+            <div class="highlight">
+                <p><strong>特别提示：</strong>由于诗章是个人创作工具，没有公开分享功能，您的作品仅您自己可见，无需担心内容审查问题。</p>
+            </div>
 
             <h2>4. 知识产权</h2>
             
             <h3>4.1 应用知识产权</h3>
             <p>诗章应用的所有知识产权（包括但不限于著作权、商标权、专利权）归开发者所有。未经授权，不得复制、修改、分发应用或其任何部分。</p>
 
-            <h3>4.2 内容知识产权</h3>
+            <h3>4.2 用户创作内容权利</h3>
+            <div class="highlight">
+                <p><strong>重要承诺：</strong>您在诗章中创作的所有内容完全属于您个人。</p>
+            </div>
+            
             <ul>
-                <li>应用内的诗歌作品版权归原作者所有</li>
-                <li>我们尊重并保护知识产权</li>
-                <li>如发现侵权内容，请及时联系我们处理</li>
-                <li>用户不得用于商业用途或侵犯版权</li>
+                <li><strong>作品所有权：</strong>您对自己创作的诗词作品享有完整版权</li>
+                <li><strong>绝不占用：</strong>我们不会对您的作品主张任何权利</li>
+                <li><strong>不会使用：</strong>我们不会使用您的作品进行任何商业活动</li>
+                <li><strong>完全控制：</strong>您可以随时删除或导出您的作品</li>
+            </ul>
+
+            <h3>4.3 第三方内容</h3>
+            <ul>
+                <li><strong>尊重版权：</strong>请确保您上传的配图不侵犯他人版权</li>
+                <li><strong>个人使用：</strong>诗章仅用于个人创作，不用于商业目的</li>
+                <li><strong>合理使用：</strong>请在合法范围内使用各类素材</li>
             </ul>
 
             <h2>5. 隐私保护</h2>
             
-            <p>我们严格按照《隐私政策》处理您的个人信息。请仔细阅读我们的隐私政策以了解详细信息。</p>
+            <div class="highlight">
+                <p><strong>隐私承诺：</strong>诗章专注于保护您的隐私和创作自由。</p>
+            </div>
+            
+            <h3>5.1 数据保护原则</h3>
+            <ul>
+                <li><strong>最小化收集：</strong>仅在云端模式下收集必要信息</li>
+                <li><strong>完全本地：</strong>本地模式下无任何数据上传</li>
+                <li><strong>透明化：</strong>明确告知数据使用目的</li>
+                <li><strong>用户控制：</strong>您可以随时删除所有数据</li>
+            </ul>
+            
+            <h3>5.2 详细信息</h3>
+            <p>我们严格按照《隐私政策》处理您的个人信息。请仔细阅读我们的隐私政策以了解详细信息。</p></p>
 
             <h2>6. 服务变更与终止</h2>
             
@@ -225,27 +321,34 @@
                 <li>业务调整需要</li>
             </ul>
 
-            <h2>7. 免责声明</h2>
+            <h2>7. 免责声明与责任限制</h2>
             
             <div class="warning">
-                <p><strong>免责条款：</strong></p>
+                <p><strong>重要免责条款：</strong>请仔细阅读以下内容</p>
             </div>
             
-            <h3>7.1 服务限制</h3>
+            <h3>7.1 服务特性说明</h3>
+            <p>诗章作为免费的个人创作工具，我们不能保证：</p>
             <ul>
-                <li>不保证服务不会中断或无错误</li>
-                <li>不保证服务器不会受到病毒或其他有害组件的影响</li>
-                <li>不保证传输的数据不会丢失、损坏或延迟</li>
+                <li>服务的绝对稳定性和无中断运行</li>
+                <li>数据传输的完全无损失</li>
+                <li>第三方服务的稳定性（如云存储）</li>
+                <li>不同设备上的完全一致性</li>
             </ul>
 
             <h3>7.2 责任限制</h3>
-            <p>除法律明确规定外，我们不对以下情况承担责任：</p>
+            <p>在法律允许的范围内，我们不对以下情况承担赔偿责任：</p>
             <ul>
-                <li>因网络故障、设备故障导致的服务中断</li>
-                <li>因用户操作不当造成的损失</li>
-                <li>第三方行为导致的损失</li>
-                <li>不可抗力因素造成的损失</li>
+                <li><strong>数据丢失：</strong>因设备故障、网络问题等导致的本地数据丢失</li>
+                <li><strong>服务中断：</strong>因系统维护、网络故障等原因导致的服务不可用</li>
+                <li><strong>用户操作：</strong>用户错误操作导致的数据损失或其他损失</li>
+                <li><strong>不可抗力：</strong>自然灾害、战争、政策变化等不可抗力因素</li>
             </ul>
+
+            <h3>7.3 数据备份建议</h3>
+            <div class="highlight">
+                <p><strong>重要提示：</strong>请定期备份您的重要作品，包括使用云端同步或手动导出保存。</p>
+            </div>
 
             <h2>8. 争议解决</h2>
             
@@ -273,14 +376,20 @@
             </ul>
 
             <div class="highlight">
-                <p><strong>感谢您使用诗章！</strong>我们致力于为您提供最好的诗歌阅读体验，让诗歌照亮生活的每一个角落。</p>
+                <p><strong>感谢您选择诗章！</strong>我们致力于为您打造最纯净、最安全的个人创作环境，让诗意在指尖绷放。</p>
             </div>
 
             <div class="last-updated">
-                <p>本服务条款最后更新时间：2024年12月</p>
-                <p>生效日期：2024年12月</p>
+                <p>本服务条款最后更新时间：2025年10月</p>
+                <p>生效日期：2025年10月</p>
+                <p>版本：1.0.0+7 个人创作工具版</p>
             </div>
         </div>
+
+        <footer>
+            <p>&copy; 2024 诗章 PoemVerse. 保留所有权利.</p>
+            <p>个人创作，自由表达</p>
+        </footer>
     </div>
 </body>
 </html>

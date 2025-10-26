@@ -15,12 +15,12 @@
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #5A7AFF 0%, #6B5BFF 30%, #8A5AFF 70%, #6B4BA5 100%);
             min-height: 100vh;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px;
         }
@@ -28,18 +28,20 @@
         .header {
             text-align: center;
             background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            padding: 30px;
+            border-radius: 20px;
+            padding: 40px 30px;
             margin-bottom: 30px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
         }
 
         .content {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
-            padding: 40px;
+            padding: 30px;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
+            backdrop-filter: blur(10px);
+            margin-bottom: 25px;
         }
 
         h1 {
@@ -49,12 +51,13 @@
         }
 
         h2 {
-            color: #34495e;
+            color: #2c3e50;
             margin-top: 30px;
-            margin-bottom: 15px;
-            font-size: 1.4em;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 5px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-bottom: 3px solid #6B5BFF;
+            padding-bottom: 10px;
+            display: inline-block;
         }
 
         h3 {
@@ -79,28 +82,33 @@
         }
 
         .back-btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #5A7AFF 0%, #6B5BFF 50%, #8A5AFF 100%);
             color: white;
-            padding: 12px 25px;
+            padding: 12px 30px;
             border: none;
             border-radius: 25px;
+            font-size: 1.1em;
+            font-weight: 600;
             text-decoration: none;
             display: inline-block;
             margin-bottom: 20px;
             transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(90, 122, 255, 0.3);
         }
 
         .back-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 30px rgba(90, 122, 255, 0.4);
+            background: linear-gradient(135deg, #6B5BFF 0%, #8A5AFF 50%, #6B4BA5 100%);
         }
 
         .highlight {
-            background: #f8f9fa;
-            padding: 15px;
-            border-left: 4px solid #3498db;
-            margin: 20px 0;
-            border-radius: 5px;
+            background: linear-gradient(145deg, #f8f9fa, #e9ecef);
+            padding: 20px;
+            border-left: 4px solid #6B5BFF;
+            margin: 25px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(107, 91, 255, 0.1);
         }
 
         .last-updated {
@@ -108,6 +116,33 @@
             color: #7f8c8d;
             font-style: italic;
             margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: rgba(255, 255, 255, 0.8);
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px;
+            }
         }
     </style>
 </head>
@@ -121,50 +156,80 @@
 
         <div class="content">
             <div class="highlight">
-                <p><strong>重要提示：</strong>我们非常重视您的隐私保护。本隐私政策详细说明了诗章应用如何收集、使用和保护您的个人信息。</p>
+                <p><strong>重要提示：</strong>诗章是一款个人诗词创作工具，专注于保护您的隐私和创作自由。本政策详细说明我们如何最大程度保护您的个人信息和创作内容。</p>
+            </div>
+
+            <h2>0. 隐私保护特色</h2>
+            
+            <div class="highlight">
+                <p><strong>诗章的隐私保护优势：</strong></p>
+                <ul style="margin-left: 0; padding-left: 20px;">
+                    <li><strong>灵活选择：</strong>支持本地和云端两种模式，由您自由选择</li>
+                    <li><strong>无社交功能：</strong>不提供公开分享、点赞或评论功能</li>
+                    <li><strong>数据最小化：</strong>仅在必要时收集最少必要信息</li>
+                    <li><strong>内容不可见：</strong>我们无法查看您的作品内容</li>
+                    <li><strong>用户完全控制：</strong>您可以随时删除所有数据</li>
+                </ul>
             </div>
 
             <h2>1. 信息收集</h2>
             
-            <h3>1.1 我们收集的信息</h3>
-            <p>诗章可能收集以下信息：</p>
+            <h3>1.1 云端模式下收集的信息</h3>
+            <p>仅在您选择云端模式时，诗章才会收集以下必要信息：</p>
             <ul>
-                <li><strong>账户信息：</strong>当您注册账户时，我们会收集您提供的邮箱地址和用户名</li>
-                <li><strong>使用数据：</strong>应用使用情况、阅读偏好、收藏记录等</li>
-                <li><strong>设备信息：</strong>设备型号、操作系统版本、应用版本等技术信息</li>
-                <li><strong>崩溃报告：</strong>为改善应用稳定性而收集的错误日志</li>
+                <li><strong>账户信息：</strong>邮箱地址（用于登录和找回密码）</li>
+                <li><strong>作品内容：</strong>您的诗词作品和配图（仅用于云端同步和备份）</li>
+                <li><strong>设备信息：</strong>设备型号、操作系统版本（仅用于技术支持）</li>
+                <li><strong>错误日志：</strong>崩溃报告和错误信息（仅用于改善应用稳定性）</li>
             </ul>
 
-            <h3>1.2 我们不收集的信息</h3>
+            <h3>1.2 本地模式下的隐私保护</h3>
+            <p>在本地模式下：</p>
+            <ul>
+                <li><strong>无数据上传：</strong>您的作品完全存储在本地设备上</li>
+                <li><strong>无账户要求：</strong>无需注册或提供任何个人信息</li>
+                <li><strong>完全隐私：</strong>我们无法访问您的作品内容</li>
+            </ul>
+
+            <h3>1.3 我们绝不收集的信息</h3>
             <ul>
                 <li>真实姓名、身份证号等个人身份信息</li>
                 <li>银行卡、信用卡等金融信息</li>
                 <li>通讯录、短信、通话记录</li>
-                <li>位置信息（除非您明确授权）</li>
+                <li>位置信息、相机、麦克风等敏感权限</li>
+                <li>社交关系、好友列表等社交信息</li>
+                <li>行为数据、浏览习惯等用户画像信息</li>
             </ul>
 
             <h2>2. 信息使用</h2>
             
-            <p>我们使用收集的信息用于：</p>
+            <p>在云端模式下，我们仅将收集的信息用于：</p>
             <ul>
-                <li><strong>提供服务：</strong>确保应用正常运行，提供个性化内容推荐</li>
-                <li><strong>改善体验：</strong>分析用户行为，优化应用功能和界面</li>
-                <li><strong>技术支持：</strong>响应您的帮助请求，解决技术问题</li>
-                <li><strong>安全保护：</strong>检测和防范欺诈、滥用等行为</li>
+                <li><strong>云端同步：</strong>在您的多个设备间同步作品</li>
+                <li><strong>数据备份：</strong>保护您的作品免于丢失</li>
+                <li><strong>账户验证：</strong>确保您的账户安全</li>
+                <li><strong>技术支持：</strong>响应您的技术问题和帮助请求</li>
+                <li><strong>应用维护：</strong>修复错误和改善应用性能</li>
             </ul>
+
+            <div class="highlight">
+                <p><strong>重要声明：</strong>我们绝不会阅读、分析或使用您的作品内容用于任何其他目的。您的创作内容完全属于您个人。</p>
+            </div>
 
             <h2>3. 信息分享与披露</h2>
             
             <div class="highlight">
-                <p><strong>重要承诺：</strong>我们不会出售、出租或以其他方式向第三方披露您的个人信息，除非：</p>
+                <p><strong>绝对承诺：</strong>我们绝不会向任何第三方分享、出售或披露您的个人信息和创作内容。您的作品完全私密，仅您自己可以查看。</p>
             </div>
             
+            <p>仅在以下极端情况下，我们可能披露必要信息：</p>
             <ul>
-                <li>获得您的明确同意</li>
-                <li>法律法规要求</li>
-                <li>保护诗章及用户的合法权益</li>
-                <li>经过去标识化处理的统计数据</li>
+                <li>获得您的书面同意</li>
+                <li>法律法规强制要求</li>
+                <li>保护您或其他人的生命安全</li>
             </ul>
+
+            <p><strong>无社交功能：</strong>诗章不提供公开分享、点赞或评论功能，您的作品不会被其他用户看到。</p>
 
             <h2>4. 数据安全</h2>
             
@@ -199,27 +264,27 @@
 
             <h2>7. 第三方服务</h2>
             
-            <p>诗章可能集成以下第三方服务：</p>
+            <p>仅在云端模式下，诗章可能使用以下第三方服务：</p>
             <ul>
-                <li><strong>云存储服务：</strong>用于数据备份和同步</li>
-                <li><strong>统计分析：</strong>用于分析应用使用情况</li>
-                <li><strong>崩溃报告：</strong>用于收集和分析应用崩溃信息</li>
+                <li><strong>Supabase（数据存储）：</strong>用于云端数据同步和备份</li>
+                <li><strong>错误监控服务：</strong>仅用于收集应用崩溃信息，不涉及用户内容</li>
             </ul>
+            
+            <div class="highlight">
+                <p><strong>重要保证：</strong>无论使用什么第三方服务，我们都不会向其分享您的作品内容或个人创作信息。</p>
+            </div>
+            
             <p>这些服务有自己的隐私政策，我们建议您仔细阅读。</p>
 
             <h2>8. 儿童隐私</h2>
             
             <p>我们不会故意收集13岁以下儿童的个人信息。如果您是13岁以下儿童的父母或监护人，发现孩子向我们提供了个人信息，请联系我们，我们会及时删除相关信息。</p>
 
-            <h2>9. 跨境数据传输</h2>
-            
-            <p>您的信息可能存储在中国境内的服务器上。如需跨境传输，我们会采取适当措施确保数据安全，包括签署标准合同条款或获得您的明确同意。</p>
-
-            <h2>10. 政策更新</h2>
+            <h2>9. 政策更新</h2>
             
             <p>我们可能不时更新本隐私政策。重大变更时，我们会通过应用内通知、邮件等方式告知您。继续使用诗章即表示您同意更新后的政策。</p>
 
-            <h2>11. 联系我们</h2>
+            <h2>10. 联系我们</h2>
             
             <p>如果您对本隐私政策有任何问题或建议，请通过以下方式联系我们：</p>
             <ul>
@@ -233,10 +298,16 @@
             </div>
 
             <div class="last-updated">
-                <p>本隐私政策最后更新时间：2024年12月</p>
-                <p>生效日期：2024年12月</p>
+                <p>本隐私政策最后更新时间：2025年10月</p>
+                <p>生效日期：20245年10月</p>
+                <p>版本：1.0.0+7 个人创作工具版</p>
             </div>
         </div>
+
+        <footer>
+            <p>&copy; 2025 诗章 PoemVerse. 保留所有权利.</p>
+            <p>个人创作，隐私至上</p>
+        </footer>
     </div>
 </body>
 </html>
